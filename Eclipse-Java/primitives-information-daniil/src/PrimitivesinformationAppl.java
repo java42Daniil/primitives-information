@@ -1,4 +1,4 @@
-import java.util.Scanner;
+//import java.util.Scanner;
 
 //Application for printing out the useful information about Java integer primitives
 public class PrimitivesinformationAppl {

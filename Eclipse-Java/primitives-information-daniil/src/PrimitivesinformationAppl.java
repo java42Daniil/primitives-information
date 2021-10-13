@@ -100,6 +100,7 @@ public class PrimitivesinformationAppl {
 			break;
 
 		default:
+			//[YG] here you should print "Wrong type" instead of "exit"
 			System.out.println("exit");
 			break;
 

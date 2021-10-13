@@ -28,6 +28,10 @@ public class PrimitivesinformationAppl {
 			minValue = (byte)  (minValue * 2);//compiler casts minValue to int,multiplies on2
 			nBits = nBits + 1;
 		}
+		// V.R. It is possible to declare maxValue and to initialize it in the 
+		// same line. Like following:
+		// byte maxValue = (byte) (minValue - 1);
+		// It is right for all of methods.
 		maxValue = (byte) (minValue - 1);
 		System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n",(int)minValue, (int)maxValue,nBits / 8);
 	}
@@ -52,6 +56,7 @@ public class PrimitivesinformationAppl {
 			nBits = nBits + 1;
 		}
 		maxValue = minValue - 1;
+		// V.R. Casting for short isn't obligatory
 		System.out.printf("minimum value is %d, maximal value is %d, number of bites is %d\n", (int) minValue, (int) maxValue, (int) nBits / 8);
 	}
    private static void printInformationByLong() {
@@ -63,6 +68,7 @@ public class PrimitivesinformationAppl {
 			nBits = nBits + 1;
 		}
 		maxValue = (long) (minValue - 1);
+		// V.R. Casting for long isn't obligatory
 		System.out.printf("minimum value is %d, maximal value is %d, number of bites is %d\n", (long) minValue, (long) maxValue, (int) nBits / 8);
 	}
    private static void printInformationByShort() {
@@ -74,6 +80,7 @@ public class PrimitivesinformationAppl {
 			nBits = nBits + 1;
 		}
 		maxValue = (short) (minValue - 1);
+		// V.R. Casting for short isn't obligatory
 		System.out.printf("minimum value is %d, maximal value is %d, number of bites is %d\n", (int) minValue, (int) maxValue, (int) nBits / 8);
 	}
    private static void printInfoByType(String type) {
@@ -100,6 +107,9 @@ public class PrimitivesinformationAppl {
 			break;
 
 		default:
+			// V.R. It error case. It is much better to write about uknown 
+			// type and show which type is unknown. Like the following:
+			// System.out.printf("Unknown type=%s", type);
 			System.out.println("exit");
 			break;
 
